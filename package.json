@@ -1,0 +1,19 @@
+{
+  "name": "npm-typescript-seed",
+  "version": "0.0.1",
+  "description": "A seed for building NPM packages with Typescript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "gulp compile"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Jon Winton",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-tsc": "^1.1.5"
+  }
+}
