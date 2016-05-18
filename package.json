@@ -4,7 +4,7 @@
   "description": "A seed for building NPM packages with Typescript",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "gulp compile && gulp lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
     "prepublish": "gulp compile"
   },
   "keywords": [
@@ -13,9 +13,14 @@
   "author": "Jon Winton",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "glob": "^7.0.3",
     "gulp": "^3.9.1",
     "gulp-tsc": "^1.1.5",
     "gulp-tslint": "^5.0.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.4",
     "tslint": "^3.10.2",
     "typescript": "^1.8.10"
   }
