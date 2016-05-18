@@ -5,7 +5,7 @@ var typescript = require('gulp-tsc');
 var tslint = require('gulp-tslint');
 
 gulp.task('compile', function() {
-  gulp.src(['src/**/*.ts'])
+  gulp.src(['src/**/*.ts', '!src/**/*.test.ts'])
     .pipe(typescript())
     .pipe(gulp.dest('dist/'))
 });
@@ -18,7 +18,7 @@ gulp.task('compile', function() {
  * no need to provide an explicit path.
  */
 gulp.task('lint', function() {
-  gulp.src(['src/**/*.ts'])
+  gulp.src(['src/**/*.ts', '!src/**/*.test.ts'])
     .pipe(tslint())
     .pipe(tslint.report('verbose'))
 });
