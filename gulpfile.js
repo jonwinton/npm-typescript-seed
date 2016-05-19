@@ -22,3 +22,12 @@ gulp.task('lint', function() {
     .pipe(tslint())
     .pipe(tslint.report('verbose'))
 });
+
+/**
+ * Watch
+ *
+ * Watches files for changes and re-compiles.
+ */
+gulp.task('watch', function() {
+  gulp.watch(['src/**/*.ts', '!src/**/*.test.ts'], ['compile']);
+});
