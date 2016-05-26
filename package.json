@@ -4,7 +4,8 @@
   "description": "A seed for building NPM packages with Typescript",
   "main": "dist/index.js",
   "scripts": {
-    "test": "gulp compile && gulp lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
+    "pretest": "gulp compile && gulp lint && rm -rf ./coverage",
+    "test": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
     "prepublish": "gulp compile",
     "watch": "gulp watch"
   },

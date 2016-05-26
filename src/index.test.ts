@@ -7,16 +7,16 @@ const lib = require('../dist/' + filename);
 
 describe('TypeScript tests: ', () => {
 
-    describe('hello', function() {
-      const fn = lib[this.title];
+  describe('hello', function() {
+    const fn = lib[this.title];
 
-      var test = fn('world')
+    var test = fn('world')
 
-      console.log(test);
+    console.log(test);
 
 
-      it('should print the proper message', () => {
-          expect(fn('world')).to.equals('Hello, world!');
-      });
+    it('should print the proper message', () => {
+      expect(fn('world')).to.equals('Hello, world!');
     });
+  });
 });
