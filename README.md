@@ -11,3 +11,5 @@ A seed project for writing your NPM packages with TypeScript.
 ## Have fun
 
 More documentation and features to come.
+
+Need to add a publish script.
